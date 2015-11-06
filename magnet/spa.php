@@ -1,6 +1,7 @@
 <?php
 function goo_gl_short_url($longUrl) {
-    $GoogleApiKey = 'AIzaSyBG9E_Nm4kPzZJHCIKyI0PH70ElUpAXriM';
+//    $GoogleApiKey = 'AIzaSyBG9E_Nm4kPzZJHCIKyI0PH70ElUpAXriM';
+    $GoogleApiKey = 'AIzaSyCW9J4IXD6ZvZuT7zecglqithnZuSTCsCY';
     $postData = array('longUrl' => $longUrl, 'key' => $GoogleApiKey);
     $jsonData = json_encode($postData);
     $curlObj = curl_init();
@@ -15,8 +16,8 @@ function goo_gl_short_url($longUrl) {
     $response = curl_exec($curlObj);
     $json = json_decode($response);
     curl_close($curlObj);
-    return $json->id;
-//    return print_r($json);
+    //return print_r($json);
+    //return $json->id;
 }
 echo goo_gl_short_url($_SERVER['QUERY_STRING']);
 //header(goo_gl_short_url($_SERVER['REQUEST_URI']));
