@@ -26,20 +26,20 @@ body{
 
 .black{
     color:#fff;
-    background:#fff url(/images/large-horseshoe-magnet.jpg) no-repeat;
+    background:#fff url(../images/large-horseshoe-magnet.jpg) no-repeat;
 }
 .white{
     color:#000;
-    background:#fff url(/images/forumLogos.jpg) no-repeat;
+    background:#fff url(../images/forumLogos.jpg) no-repeat;
 }
 @media all and (max-width: 767px) {
 .black{
     color:#fff;
-    background:#fff url(/images/large-horseshoe-magnet-phone.jpg) no-repeat;
+    background:#fff url(../images/large-horseshoe-magnet-phone.jpg) no-repeat;
 }
 .white{
     color:#000;
-    background:#fff url(/images/forumLogos-phone.jpg) no-repeat;
+    background:#fff url(../images/forumLogos-phone.jpg) no-repeat;
 }
 }
 
