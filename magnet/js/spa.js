@@ -13,9 +13,9 @@ angular.module('magRed', ['ui.bootstrap']).controller('MagRedController', functi
   };
   $scope.getHttpUrl = function() {
   // insert some url checking here
-    $http.get('http://magnet.june07.com/spa.php?http://magnet.june07.com/m?'+$scope.magnetUrl).
+    $http.get('http://june07.com/magnet/spa.php?http://june07.com/magnet/m?'+$scope.magnetUrl).
     success(function(data, status, headers, config) {
-        $scope.urls.push({ value: 'http://magnet.june07.com/m?'+$scope.magnetUrl, short: data, bbc: '[URL="'+data+'"]'+data+'[/URL]' });
+        $scope.urls.push({ value: 'http://june07.com/magnet/m?'+$scope.magnetUrl, short: data, bbc: '[URL="'+data+'"]'+data+'[/URL]' });
     }).
     error(function(data, status, headers, config) {
     // called asynchronously if an error occurs
