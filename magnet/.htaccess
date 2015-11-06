@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} ^/m\\?$
+RewriteRule .* /cgi-bin/magnet.cgi/$1 [R=301,L]

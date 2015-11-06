@@ -1,0 +1,61 @@
+<html lang="en" ng-app="magRed">
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="http://do.onezerohosting.com/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/full-slider.css">
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/spa.css">
+    <script src="/js/spa.js"></script>
+</head>
+
+<body>
+
+    <div class="container" align="center">
+        <div class="jumbotron">
+            <h1>Magnet Redirect Service</h1>
+            <p>When you want to share magnet links...</p>
+        </div>
+        <div ng-controller="MagRedController">
+            <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+            <input type="text" size="80" ng-model="magnetUrl"/>
+            <button class='btn btn-default' ng-click="getHttpUrl()">Submit Magnet URL</button>
+            <div class="well"><p>Necessity and education are two factors that brought me to write this.  A few days ago I saw a need of a user who was attempting to share magnet URI's on a Discourse forum.  Investigating further I discovered that there was no ability to insert magnet URI's into the editor.  Only Http URI's were allowed.  I believe this may also be the case with BBCode in general and other forum editors.  Anyway, I needed to be able to redirect from one URI scheme to another (http: to magnet:).  I also wanted to learn Angular so the result was this service here.  Hope others find it usefull...</p></div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">HTTP magnet URI's</div>
+                <div class="panel-body">
+                    <table class="table" data-toggle="table" data-cache="false" data-height="200" data-row-style="rowStyle">
+                    <thead>
+                    <tr>
+                    <th data-field="magnet-link-field" class="col-md-2">Magnet Link</th>
+                    <th data-field="short-link-field" class="col-md-6">Shortened Link</th>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="url in urls" ng-class-odd="odd" ng-class-even="even">
+                        <td><a href="{{url.value}}" title="Magnet Link" id="magnet-link"></a></td>
+                        <td><a href="{{url.short}}" title="Magnet Link" id="short-link">{{url.short}}</a></td>
+                        <td>&nbsp</td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+</html>

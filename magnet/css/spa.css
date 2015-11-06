@@ -1,0 +1,154 @@
+#magnet-link {
+    background-image:url(/images/magnet.png);
+    background-repeat: no-repeat;
+    display:block;
+    height:50px;
+    width:50px;
+    float: left;
+}
+#short-link {
+    float: left;
+}
+#bbcode-link {
+   width: 400px;
+   background-color: transparent;
+}
+.container .jumbotron {
+    font-family: 'Oswald', sans-serif;
+    margin: 100px 0;
+    background-color: rgba(255,255,255, 0.2);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.well {
+    text-align: left;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: x-large;
+    opacity: 0.7; /* opacity [0-1] */
+    -moz-opacity: 0.7; /* opacity [0-1] */
+    -webkit-opacity: 0.7; /* opacity [0-1] */
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+#about p {
+  width: 80%;
+}
+.p:first-of-type::first-letter { initial-letter: 3; color: red; }
+.dropcap:first-letter {
+    font-size: 4.5em;
+    float: left;
+    margin-top: .5em;
+}
+input, select, textarea{
+    color: #000;
+}
+.panel {
+  margin-top: 20px;
+}
+table {
+  overflow: scroll;
+}
+.panel-primary {
+    background-color: rgba(255,255,255, 0.9);
+    border-width: 2px;
+    -moz-border-top-left-radius: 25px;
+    -moz-border-top-right-radius: 25px;
+    -webkit-border-top-left-radius: 25px;
+    -webkit-border-top-right-radius: 25px;
+    border-border-top-left-radius: 25px;
+    border-border-top-right-radius: 25px;
+
+    -moz-border-bottom-left-radius: 25px;
+    -moz-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    border-border-bottom-left-radius: 25px;
+    border-border-bottom-right-radius: 25px;
+}
+.panel-heading {
+    -moz-border-top-left-radius: 20px;
+    -moz-border-top-right-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    border-border-top-left-radius: 20px;
+    border-border-top-right-radius: 20px;
+}
+
+.vertical .carousel-inner {
+  height: 100%;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 400px;
+}
+
+.carousel.vertical .prev {
+  top: -400px;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -400px;
+}
+
+.carousel.vertical .active.right {
+  top: 400px;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+.carousel-caption {
+    top: 200;
+    bottom: auto;
+}
+#what-is-this.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20%;
+    width: 70%;
+    margin: -10% 0 0 -35%;
+}
+#about {
+  color: #000000;
+}
+.carousel-indicators {
+  position: fixed;
+  height: 50%;
+  width: 30px;
+}
+.carousel-indicators li {
+  background-color: #000;
+  border-color: #000;
+  margin: 5px;
+  float: left;
+  clear: left;
+  width: 20px;
+  height: 20px;
+}
+.carousel-indicators li.active {
+  margin: 5px;
+  float: left;
+  clear: left;
+  width: 20px;
+  height: 20px;
+}

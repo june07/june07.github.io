@@ -1,0 +1,6 @@
+RewriteEngine on
+#RewriteCond %{REQUEST_URI} ^/?index\.html$
+#RewriteRule .* /cgi-bin/magnet.cgi/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/\\?$
+RewriteRule .* /cgi-bin/magnet.cgi/$1 [R=301,L]
