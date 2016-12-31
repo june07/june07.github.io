@@ -21,4 +21,5 @@ const notifications =
         'url': '',
         'target': ''
     }
-} ]
+} ];
+return notifications;
