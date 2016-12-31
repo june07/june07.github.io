@@ -1,4 +1,4 @@
-notifications =
+const notifications =
 [ {
     'id': 0,
     {
