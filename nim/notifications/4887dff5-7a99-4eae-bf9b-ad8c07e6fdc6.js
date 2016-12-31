@@ -1,5 +1,5 @@
-notification => {
-    const notifications =
+(notification => {
+    var notifications =
     [ {
         'id': 0,
         'notification': {
@@ -24,4 +24,4 @@ notification => {
         }
     } ];
     return notifications;
-};
+})();
