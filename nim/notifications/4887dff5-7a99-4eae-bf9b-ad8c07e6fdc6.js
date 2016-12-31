@@ -1,5 +1,5 @@
 (notification => {
-    return
+    console.dir(
     [ {
         'id': 0,
         'notification': {
@@ -22,5 +22,5 @@
             'url': '',
             'target': ''
         }
-    } ];
+    } ]);
 })();
