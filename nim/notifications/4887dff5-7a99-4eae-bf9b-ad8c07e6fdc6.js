@@ -1,14 +1,24 @@
-$.notify({
-        animate: {
-                enter: 'animated fadeInRight',
-                exit: 'animated fadeOutRight'
-        },
-            // options
-            title: '<strong>Heads up!</strong>',
-            message: 'Bootstrap Notify uses Bootstrap Info Alert styling as its default setting.'
-        },{
-            // settings
-            type: 'info',
-            delay: 0,
-            allow_dismiss: true
-        });
+notifications =
+[ {
+    'id': 0,
+    {
+        'title': 'Test Title',
+        'message': 'Test Message',
+        'icon': '',
+        'type': '',
+        'progress': '',
+        'url': '',
+        'target': ''
+    }
+}, {
+    'id': 1,
+    {
+        'title': 'New Logo',
+        'message': 'Would love to get your feedback on the new logo!',
+        'icon': '',
+        'type': '',
+        'progress': '',
+        'url': '',
+        'target': ''
+    }
+} ]
