@@ -1,5 +1,5 @@
 (notification => {
-    var notifications =
+    return
     [ {
         'id': 0,
         'notification': {
@@ -23,5 +23,4 @@
             'target': ''
         }
     } ];
-    return notifications;
 })();
