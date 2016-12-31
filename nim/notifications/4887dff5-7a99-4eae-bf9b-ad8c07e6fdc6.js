@@ -1,6 +1,5 @@
 (notification => {
-    console.dir(
-    [ {
+    return [ {
         'id': 0,
         'notification': {
             'title': 'Test Title',
@@ -22,5 +21,5 @@
             'url': '',
             'target': ''
         }
-    } ]);
+    } ];
 })();
