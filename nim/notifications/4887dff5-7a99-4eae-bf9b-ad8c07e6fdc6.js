@@ -1,4 +1,4 @@
-function() {
+notification => {
     const notifications =
     [ {
         'id': 0,
@@ -24,4 +24,4 @@ function() {
         }
     } ];
     return notifications;
-}
+};
