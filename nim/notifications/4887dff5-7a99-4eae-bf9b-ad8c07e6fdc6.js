@@ -1,7 +1,7 @@
 const notifications =
 [ {
     'id': 0,
-    {
+    'notification': {
         'title': 'Test Title',
         'message': 'Test Message',
         'icon': '',
@@ -12,7 +12,7 @@ const notifications =
     }
 }, {
     'id': 1,
-    {
+    'notification': {
         'title': 'New Logo',
         'message': 'Would love to get your feedback on the new logo!',
         'icon': '',
