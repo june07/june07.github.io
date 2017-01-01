@@ -8,7 +8,8 @@
         "progress": "",
         "url": "",
         "target": ""
-    }
+    },
+    "read": false
 }, {
     "id": 1,
     "notification": {
@@ -19,5 +20,6 @@
         "progress": "",
         "url": "",
         "target": ""
-    }
+    },
+    "read": false
 } ]
