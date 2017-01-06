@@ -1,9 +1,9 @@
 [ {
     "id": 0,
     "notification": {
-        "title": "Painting is just another way of keeping a diary.",
+        "title": "New Release Version: 0.9.2",
         "message": "Personally I have struggled massively with the dilemma of talent vs desire. Choosing desire may not always be the easiest thing to do. It may seem a waste to leave those natural talents behind and strike out in a new direction. But at least you’ll feel alive.",
-        "icon": "",
+        "icon": "new_releases",
         "type": "",
         "progress": "",
         "url": "",
@@ -12,11 +12,24 @@
     "read": false,
     "date": "1/2/2017"
 }, {
+    "id": 1422,
+    "notification": {
+        "title": "Announcement message.",
+        "message": "The world has so many lessons to teach you. I consider the world, our earth, to be like a school, and our life, the classrooms. Sometimes on our planet life school, the lessons often come dressed up as detours and road blocks and sometimes as full blown crises. And the secret I've learned to getting ahead is being open to the lessons.!",
+        "icon": "announcement",
+        "type": "",
+        "progress": "",
+        "url": "",
+        "target": ""
+    },
+    "read": false,
+    "date": "4/22/2016"
+},  {
     "id": 1,
     "notification": {
         "title": "Life being what it is, one dreams of revenge.",
         "message": "The world has so many lessons to teach you. I consider the world, our earth, to be like a school, and our life, the classrooms. Sometimes on our planet life school, the lessons often come dressed up as detours and road blocks and sometimes as full blown crises. And the secret I've learned to getting ahead is being open to the lessons.!",
-        "icon": "",
+        "icon": "info",
         "type": "",
         "progress": "",
         "url": "",
@@ -29,7 +42,7 @@
     "notification": {
         "title": "There must be more to life than having everything.",
         "message": "If any one faculty of our nature may be called more wonderful than the rest, I do think it is memory. There seems something more speakingly incomprehensible in the powers, the failures, the inequalities of memory, than in any other of our intelligences. The memory is sometimes so retentive, so serviceable, so obedient; at others, so bewildered and so weak; and at others again, so tyrannic, so beyond control! We are, to be sure, a miracle every way; but our powers of recollecting and of forgetting do seem peculiarly past finding out.",
-        "icon": "",
+        "icon": "message",
         "type": "",
         "progress": "",
         "url": "",
