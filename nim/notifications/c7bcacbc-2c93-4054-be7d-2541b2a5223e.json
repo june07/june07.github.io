@@ -1,0 +1,12 @@
+[ {
+    "id": 100,
+    "notification": {
+        "title": "New Releaase Version: 0.10.0",
+        "message": "This release includes a lot of UI changes, hopefully, all to the better.  The color scheme has changed slightly to match that of the main NIM icon.  A floating material style button has been added to the lower right corner of the popup to facilitate access to current and possible future features without being disruptive to the UI.  Currently, there is a button for the settings modal as well as well as a button for a new feature, the notification area (where you are reading this message now.)  Again, the notification area was meant to be very non-intrusive and to allow for easier communication to users about important issues.  Finally a Google+ Platform link was added to make it even easier to add those stellar reviews and 5 star ratings <i class=\"emo-thumbsup\"></i>.  The donation link was also changed partially in response to user feedback about making some additions to that area.",
+        "icon": "new_releases",
+        "type": "new"
+    },
+    "read": false,
+    "date": "1/13/2017",
+    "ttl": 14
+} ]
