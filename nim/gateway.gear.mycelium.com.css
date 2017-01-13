@@ -1,5 +1,8 @@
 #gear-widget > div.container {
-	width: 40%
+	width: 40%;
 	margin: 0 auto;
 	padding-top: 100px;
+}
+#gear-widget > div.footer.gray {
+	width: 40%;
 }
