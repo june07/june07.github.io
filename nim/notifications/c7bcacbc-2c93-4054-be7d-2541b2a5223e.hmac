@@ -1,1 +1,4 @@
-05394f3ee0bfe6ad7d657637f73fcc34
+File "/root/microcule/bin/binaries/micro-python3", line 26, in <module>
+    exec(code)
+  File "<string>", line 6, in <module>
+ImportError
