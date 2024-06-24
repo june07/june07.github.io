@@ -24,15 +24,11 @@ jobs:
     - name: Find updated markdown files
       id: find_md_files
       run: |
-        if git rev-parse HEAD^ >/dev/null 2>&1; then
-          PREVIOUS_SHA=$(git rev-parse HEAD^)
-        else
-          PREVIOUS_SHA=$(git rev-list --max-parents=0 HEAD)  # Use the first commit SHA as a fallback
-        fi
-        CURRENT_SHA=$(git rev-parse HEAD)
+        PREVIOUS_SHA=$(git log -2 --format=%H | tail -1)
+        CURRENT_SHA=$(git log -1 --format=%H)
         echo "Previous commit SHA: $PREVIOUS_SHA"
         echo "Current commit SHA: $CURRENT_SHA"
-        MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA -- '*.md')
+        MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA | grep '\.md$')
         echo "Updated markdown files: $MD_FILES"
         echo "::set-output name=md_files::$MD_FILES"
 
