@@ -28,14 +28,8 @@ jobs:
       run: |
         PREVIOUS_SHA=$(git log -n 2 --format=%H | tail -1)
         CURRENT_SHA=$(git log -n 1 --format=%H)
-        git log -n 2 --format=%H
-        echo "HERE1"
-        git log -n 1 --format=%H
-        echo "HERE2"
         echo "Previous commit SHA: $PREVIOUS_SHA"
         echo "Current commit SHA: $CURRENT_SHA"
-        git log --format=%H
-        echo "HERE3"
         MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA | grep '\.md$')
         echo "Updated markdown files: $MD_FILES"
         echo "::set-output name=md_files::$MD_FILES"
@@ -52,6 +46,8 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add *.html
+        for file in ${{ steps.find_md_files.outputs.md_files }}; do
+          git add ${file%.md}.html
+        done
         git commit -m 'Update HTML files from updated markdown'
         git push
