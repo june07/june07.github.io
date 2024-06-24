@@ -1,0 +1,43 @@
+name: Convert Markdown to HTML
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+
+jobs:
+  convert-markdown-to-html:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Pandoc
+      run: sudo apt-get install pandoc
+
+    - name: Find updated markdown files
+      id: find_md_files
+      run: |
+        echo "::set-output name=md_files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- '*.md')"
+
+    - name: Convert markdown to HTML
+      if: steps.find_md_files.outputs.md_files != ''
+      run: |
+        for file in ${{ steps.find_md_files.outputs.md_files }}; do
+          pandoc "$file" -o "${file%.md}.html"
+        done
+
+    - name: Commit and push HTML files
+      if: steps.find_md_files.outputs.md_files != ''
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add *.html
+        git commit -m 'Update HTML files from updated markdown'
+        git push
