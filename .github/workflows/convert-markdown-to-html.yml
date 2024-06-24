@@ -24,15 +24,15 @@ jobs:
     - name: Find updated markdown files
       id: find_md_files
       run: |
-        PREVIOUS_SHA=$(git log -2 --format=%H | tail -1)
-        CURRENT_SHA=$(git log -1 --format=%H)
-        git log -2 --format=%H
+        PREVIOUS_SHA=$(git log -n 2 --format=%H | tail -1)
+        CURRENT_SHA=$(git log -n 1 --format=%H)
+        git log -n 2 --format=%H
         echo "HERE1"
-        git log -1 --format=%H
+        git log -n 1 --format=%H
         echo "HERE2"
         echo "Previous commit SHA: $PREVIOUS_SHA"
         echo "Current commit SHA: $CURRENT_SHA"
-        git log -3 --format=%H
+        git log -n 3 --format=%H
         echo "HERE3"
         MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA | grep '\.md$')
         echo "Updated markdown files: $MD_FILES"
