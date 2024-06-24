@@ -38,7 +38,7 @@ jobs:
       if: steps.find_md_files.outputs.md_files != ''
       run: |
         for file in ${{ steps.find_md_files.outputs.md_files }}; do
-          pandoc "$file" -o "${file%.md}.html"
+          pandoc "$file" -o "${file%.md}.html" --standalone
         done
 
     - name: Commit and push HTML files
