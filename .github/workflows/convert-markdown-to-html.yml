@@ -32,7 +32,7 @@ jobs:
         echo "HERE2"
         echo "Previous commit SHA: $PREVIOUS_SHA"
         echo "Current commit SHA: $CURRENT_SHA"
-        git log -n 3 --format=%H
+        git log --format=%H
         echo "HERE3"
         MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA | grep '\.md$')
         echo "Updated markdown files: $MD_FILES"
