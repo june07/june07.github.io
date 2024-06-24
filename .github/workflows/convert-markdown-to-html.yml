@@ -24,7 +24,13 @@ jobs:
     - name: Find updated markdown files
       id: find_md_files
       run: |
-        echo "::set-output name=md_files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- '*.md')"
+        PREVIOUS_SHA=$(git rev-parse HEAD^)
+        CURRENT_SHA=$(git rev-parse HEAD)
+        echo "Previous commit SHA: $PREVIOUS_SHA"
+        echo "Current commit SHA: $CURRENT_SHA"
+        MD_FILES=$(git diff --name-only $PREVIOUS_SHA $CURRENT_SHA -- '*.md')
+        echo "Updated markdown files: $MD_FILES"
+        echo "::set-output name=md_files::$MD_FILES"
 
     - name: Convert markdown to HTML
       if: steps.find_md_files.outputs.md_files != ''
